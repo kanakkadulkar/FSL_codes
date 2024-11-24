@@ -32,6 +32,7 @@ app.get("/product", (req, res) => {
 });
 
 app.post("/product", (req, res) => {
+    const { id } = req.params
     const { value } = req.body
     const newItem = { id: Date.now(), value };
     data.push(newItem);
@@ -39,7 +40,7 @@ app.post("/product", (req, res) => {
 });
 
 app.put("/product/:id", (req, res) => {
-    const { id } = req.params
+    const { id } = req.params;
     const { value } = req.body
 
     const item = data.find(i => i.id == id);

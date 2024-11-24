@@ -32,8 +32,10 @@ app.get("/product", (req, res) => {
 });
 
 app.post("/product", (req, res) => {
-    const { value } = req.body
-    const newItem = { id: Date.now(), value };
+    const { id } = req.params
+    const {  price,value } = req.body
+    
+    const newItem = { id,price,value };
     data.push(newItem);
     res.json(newItem);
 });
