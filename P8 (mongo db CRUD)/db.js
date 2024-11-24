@@ -21,7 +21,7 @@ Item.updateOne({ name: "Item1" }, { price: 3000 })
     .then(() => console.log("Item Updated Successfully!"))
     .catch(() => console.log("Some error in updating value"));
 
-// Delete 
-Item.deleteOne({ name: "Updated Item" })
-    .then(() => console.log("Item Deleted Successfully!"))
-    .catch(() => console.log("Some error in deleting Item"))
+// // Delete 
+// Item.deleteOne({ name: "Updated Item" })
+//     .then(() => console.log("Item Deleted Successfully!"))
+//     .catch(() => console.log("Some error in deleting Item"))
